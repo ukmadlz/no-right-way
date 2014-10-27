@@ -16,11 +16,93 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/cloudant.css" id="theme">
 
   </head>
 
   <body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+        <div class="header">
+          <img src="images/Cloudant+IBM_Logo_RGB_2C-2.png" />
+        </div>
+
+        <!-- Intro Slide -->
+        <section>
+
+          <h1>No Right Way</h1>
+          <p>A discussion on Databases and a guide to CouchDB &amp; Cloudant</p>
+
+        </section>
+
+        <!-- Disclaimer Slide -->
+        <section id="disclaimer">
+
+          <p>ANY VIEWS OR OPINIONS EXPRESSED IN THIS PRESENTATION ARE THOSE OF THE AUTHOR, AND DO NOT NECESSARILY REPRESENT OFFICIAL POSITIONS, STRATEGIES OR OPINIONS OF INTERNATIONAL BUSINESS MACHINES (IBM) CORPORATION.</p>
+          <p>THE INFORMATION CONTAINED IN THIS PRESENTATION IS PROVIDED FOR INFORMATIONAL PURPOSES ONLY.</p>
+          <p>WHILE EFFORTS WERE MADE TO VERIFY THE COMPLETENESS AND ACCURACY OF THE INFORMATION CONTAINED IN THIS PRESENTATION, IT IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</p>
+          <p>IN ADDITION, THIS INFORMATION IS BASED ON IBM’S CURRENT PRODUCT PLANS AND STRATEGY, WHICH ARE SUBJECT TO CHANGE BY IBM WITHOUT NOTICE.</p>
+          <p>IBM SHALL NOT BE RESPONSIBLE FOR ANY DAMAGES ARISING OUT OF THE USE OF, OR OTHERWISE RELATED TO, THIS PRESENTATION OR ANY OTHER DOCUMENTATION.</p>
+          <p>NOTHING CONTAINED IN THIS PRESENTATION IS INTENDED TO, OR SHALL HAVE THE EFFECT OF:CREATING ANY WARRANTY OR REPRESENTATION FROM IBM (OR ITS AFFILIATES OR ITS OR THEIR SUPPLIERS AND/OR LICENSORS); ORALTERING THE TERMS AND CONDITIONS OF THE APPLICABLE LICENSE AGREEMENT GOVERNING THE USE OF IBM SOFTWARE.</p>
+
+        </section>
+
+        <!-- About Me Slide -->
+        <section>
+
+          <h1>Who the are you…?</h1>
+          <h2>Mike Elsmore</h2>
+          <h4>Developer Advocate for Cloudant</h4>
+          <p>mike.elsmore@uk.ibm.com</p>
+          <p>@ukmadlz</p>
+
+        </section>
+
+        <div class="footer">
+          <small>&copy;2014 IBM Corporation</small>
+        </footer>
+
+      </div>
+
+    </div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
   </body>
 
 </html>
