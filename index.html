@@ -62,6 +62,13 @@
 
         </section>
 
+        <!-- Kinds of Database -->
+        <section>
+
+          <h1>Kinds of database</h1>
+
+        </section>
+
         <div class="footer">
           <small>&copy;2014 IBM Corporation</small>
         </footer>
@@ -97,7 +104,9 @@
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+	        { src: 'socket.io/socket.io.js', async: true },
+	        { src: 'plugin/notes-server/client.js', async: true }
 				]
 			});
 
