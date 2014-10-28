@@ -332,6 +332,35 @@
 
             </section>
 
+            <!-- How does this apply to CAP theorem -->
+            <section>
+
+              <h1>How does this apply to CAP theorem</h1>
+
+              <aside class="notes" >
+
+                <p>As I said, all these datastore use or fallback to an AP approach. Which means…</p>
+
+                <p>Instead of prioritizing consistency and availability, shift focus towards ensuring availability and partition tolerance</p>
+                <ul>
+                  <li>Unlikely to find a scenario where loss in availability would be tolerable</li>
+                  <li>Selecting for partition tolerance opens up possibility for horizontal scaling!</li>
+                  <li>Distribution over cluster also improves availability
+                    <br/>
+                    In aggregate the cluster is more reliable than the individual nodes that comprise it</li>
+                </ul>
+                <p>This comes at the cost of a weakened consistency model</p>
+                <ul>
+                  <li>Can no longer guarantee that all nodes (and clients connected to these nodes) share identical versions of the same data at a given moment</li>
+                  <li>The result is an “eventual consistency” model
+                    <br/>
+                    The premise that all nodes in a distributed system will eventually share the same versioning of all data, given sufficient time</li>
+                </ul>
+
+              </aside>
+
+            </section>
+
         </section>
 
         <!-- Why you would use Mongo -->
@@ -341,6 +370,13 @@
 
           <p class="fragment" >It's quick</p>
           <p class="fragment" >It's easy to use</p>
+          <pre class="fragment" >
+            <code>
+              db.unicorns.insert({name: 'Aurora', gender: 'f', weight: 450});
+              db.unicorns.find();
+              db.system.indexes.find();
+            </code>
+          </pre>
 
           <aside class="notes" >
 
@@ -350,6 +386,8 @@
               <li>create and set the config file</li>
               <li>launch the DB binary</li>
             </ul>
+
+            <p>Written around JS, which is why it works AMAZINGLY within the MEAN stack, means simple chained
 
           </aside>
 
