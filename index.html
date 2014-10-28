@@ -35,7 +35,7 @@
         <section>
 
           <h1>No Right Way</h1>
-          <p>A discussion on Databases and a guide to CouchDB &amp; Cloudant</p>
+          <p>A discussion on Databases and a guide to CouchDB and Cloudant</p>
 
         </section>
 
@@ -115,6 +115,149 @@
 
         </section>
 
+        <!-- What is NoSQL -->
+        <section>
+
+          <h1>What is NoSQL</h1>
+
+          <aside class="notes" >
+            <p>The main separators from RDB to NoSQL, apart from the obvious lack of SQL</p>
+            <p>Variation: Graph, XML, JSON &amp; triples</p>
+            <p>New query languages: you can have an alternative to SQL, so possibly simpler or structure-specific</p>
+            <p>'Schema less': no rigid schema enforced by the DBMS</p>
+            <p>Programmer friendly (we hope): easily to programmatically navigate the structure</p>
+            <p>May not guarantee full ACID behavior</p>
+            <p>&nbsp;Atomicity – Consistency – Isolation – Durability</p>
+            <p>May have a distributed, fault-tolerant, elastic architecture</p>
+          </aside>
+
+        </section>
+
+        <!-- Why it's so appealing -->
+        <section>
+
+          <h1>What's the appeal</h1>
+
+          <p class="fragment" >Data Model Flexibility</p>
+          <p class="fragment" >Elastic (automatic) scale in/out</p>
+          <p class="fragment" >Lower-cost operational data management platform for thousands &amp; millions of users</p>
+
+          <aside class="notes" >
+
+            <p>Data Model Flexibility</p>
+            <ul>
+              <li>Data models that are native to the application space (e.g. JSON)</li>
+              <li>No “schema-first” requirement: rapid and agile development process</li>
+            </ul>
+            <p>Elastic (automatic) scale in/out</p>
+            <ul>
+              <li>Easy elasticity and scalability to multiple racks (10s to 100s of severs)</li>
+              <li>Supports dynamic workloads</li>
+              <li>Optimized for web scale and extreme performance</li>
+              <li>Ease of replication</li>
+            </ul>
+            <p>Lower-cost operational data management platform for thousands  millions of users</p>
+            <ul>
+              <li>Increase in volumes of data, retention requirements (3-15 years)</li>
+              <li>Commodity hardware and pay-for services</li>
+              <li>Fault-tolerance and high availability</li>
+            </ul>
+
+          </aside>
+
+        </section>
+
+        <!-- CAP Therom -->
+        <section>
+
+          <!-- What is CAP Theorem -->
+          <section id="cap-theorem">
+
+            <h1>CAP Theorem</h1>
+            <img src="images/CAP_theorem.jpg" />
+
+            <aside class="notes" >
+              <p>CAP Theorem, also knows as Brewer's Theorem from Eric Brewer</p>
+              <ul>
+                <li>Consistency: all nodes belonging to system see the same data at the same time</li>
+                <li>Availability: a guarantee that every request receives a response of success or failure</li>
+                <li>Partition tolerance: system continues to operate despite message loss or failure of parts of system</li>
+              </ul>
+              <p>Given a data partition, will you prioritize consistency or availability?</p>
+            </aside>
+
+          </section>
+
+          <!-- How this relates to RDB -->
+          <section>
+
+            <h1>And this applies to Relation how?</h1>
+
+            <aside class="notes" >
+
+              <p>When to use Relational Database Management Systems (RDBMS)</p>
+              <ul>
+                <li>Data normalization is critical for elimination of redundancy and ensuring master data consistency</li>
+                <li>Many “justifications” for using relational databases are cultural, not technical
+                  <br/>
+                  e.g. Solution already built with relational DB  resistance to change</li>
+                <li>Prioritization of data availability and consistency lends RDBMS well to handling transactional, reporting, log, and warehouse data</li>
+                <li>Analytics and BI tooling are valid reasons for maintaining a relational database, but this too is rapidly changing</li>
+              </ul>
+
+              <p>According to the CAP Theorem, it is impossible for relational databases to be partition tolerant</p>
+              <ul>
+                <li>So long as RDBMS prioritizes availability and consistency, they are unable to scale out (horizontally)!</li>
+                <li>Vertical scaling is the alternative, but this practice becomes prohibitively expensive and is not sustainable</li>
+              </ul>
+
+            </aside>
+
+          </section>
+
+          <!-- And NoSQL -->
+          <section>
+
+            <h1>And NoSQL fits in here…?</h1>
+
+            <aside class="notes" >
+
+              <p>Most NoSQL technologies have been built for scale, which means that they fit either a CP or AP model</p>
+
+              <p>Popular datastores like CouchBase &amp; Mongo try to be CP, but fallback to AP when things get tough</p>
+              <p>CouchDB follows an AP approach from the start using an eventual consistency</p>
+
+            </aside>
+
+          </section>
+
+        </section>
+
+        <!-- And the culprits -->
+        <section>
+
+          <!-- Key value -->
+          <div class="fragment" >
+            <h3>Key Value Stores</h3>
+          </div>
+
+          <!-- Columnar -->
+          <div class="fragment" >
+            <h3>Columnar Stores</h3>
+          </div>
+
+          <!-- Document Store -->
+          <div class="fragment" >
+            <h3>Document Stores</h3>
+          </div>
+
+          <!-- Graph Store -->
+          <div class="fragment" >
+            <h3>Graph Stores</h3>
+          </div>
+
+        </section>
+
         <div class="footer">
           <small>&copy;2014 IBM Corporation</small>
         </footer>
@@ -135,6 +278,7 @@
 				progress: true,
 				history: true,
 				center: true,
+        fragments: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
 				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
