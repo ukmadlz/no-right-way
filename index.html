@@ -238,55 +238,119 @@
         <!-- And the culprits -->
         <section>
 
-          <!-- Key value -->
-          <div class="fragment" >
-            <h3>Key Value Stores</h3>
-          </div>
+          <section>
 
-          <!-- Columnar -->
-          <div class="fragment" >
-            <h3>Columnar Stores</h3>
-          </div>
+            <!-- Key value -->
+            <div class="fragment" >
+              <h3>Key Value Stores</h3>
+            </div>
 
-          <!-- Graph Store -->
-          <div class="fragment" >
-            <h3>Graph Stores</h3>
-          </div>
+            <!-- Columnar -->
+            <div class="fragment" >
+              <h3>Columnar Stores</h3>
+            </div>
 
-          <!-- Document Store -->
-          <div class="fragment" >
-            <h3>Document Stores</h3>
-          </div>
+            <!-- Graph Store -->
+            <div class="fragment" >
+              <h3>Graph Stores</h3>
+            </div>
+
+            <!-- Document Store -->
+            <div class="fragment" >
+              <h3>Document Stores</h3>
+            </div>
+
+            <aside class="notes" >
+              <p>Key Value Stores</p>
+              <ul>
+                <li>Cassandra</li>
+                <li>Riak</li>
+                <li>MemcacheDB</li>
+                <li>HBase</li>
+                <li>pickleDB</li>
+              </ul>
+              <p>Columnar Stores</p>
+              <ul>
+                <li>Cassandra</li>
+                <li>HBase</li>
+              </ul>
+              <p>Document Stores - <strong>50% of NoSQL DBs are document based</strong></p>
+              <ul>
+                <li>CouchDB and because of it Cloudant</li>
+                <li>MongoDB</li>
+                <li>Redis</li>
+                <li>CouchBase</li>
+                <li>Engine Yard</li>
+              </ul>
+              <p>Graph Store</p>
+              <ul>
+                <li>*dex</li>
+                <li>Neo4j</li>
+                <li>InfiniteGraph</li>
+                <li>Sesame</li>
+              </ul>
+            </aside>
+
+          </section>
+
+          <!-- And the most common Document Store type -->
+          <section>
+
+              <pre>
+                <code>
+        {
+             "firstName“ : "John",
+             "lastName" : "Smith",
+             "age“ : 25,
+             "address" :
+             {
+                 "streetAddress“ : "21 2nd Street",
+                 "city" : "New York",
+                 "state“ : "NY",
+                 "postalCode" : "10021"
+             },
+             "phoneNumber":
+             [
+                 {
+                   "type" : "home",
+                   "number“ : "212 555-1234"
+                 },
+                 {
+                   "type" : "fax",
+                   "number“ : "646 555-4567"
+                 }
+             ]
+         }
+                </code>
+              </pre>
+
+              <aside class="notes" >
+
+                <p>And they all use JSON or some derivative, that's basically JSON but a different name</p>
+
+              </aside>
+
+            </section>
+
+        </section>
+
+        <!-- Why you would use Mongo -->
+        <section>
+
+          <h1>Why use MongoDB</h1>
+
+          <p class="fragment" >It's quick</p>
+          <p class="fragment" >It's easy to use</p>
 
           <aside class="notes" >
-            <p>Key Value Stores</p>
+
+            <p>It's quick, to get started you:</p>
             <ul>
-              <li>Cassandra</li>
-              <li>Riak</li>
-              <li>MemcacheDB</li>
-              <li>HBase</li>
-              <li>pickleDB</li>
+              <li>download the binaries (server and client)</li>
+              <li>create and set the config file</li>
+              <li>launch the DB binary</li>
             </ul>
-            <p>Columnar Stores</p>
-            <ul>
-              <li>Cassandra</li>
-              <li>HBase</li>
-            </ul>
-            <p>Document Stores - <strong>50% of NoSQL DBs are document based</strong></p>
-            <ul>
-              <li>CouchDB and because of it Cloudant</li>
-              <li>MongoDB</li>
-              <li>Redis</li>
-              <li>CouchBase</li>
-              <li>Engine Yard</li>
-            </ul>
-            <p>Graph Store</p>
-            <ul>
-              <li>*dex</li>
-              <li>Neo4j</li>
-              <li>InfiniteGraph</li>
-              <li>Sesame</li>
-            </ul>
+
           </aside>
 
         </section>

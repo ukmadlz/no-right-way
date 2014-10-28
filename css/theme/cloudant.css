@@ -95,19 +95,19 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #13daec; }
+  border-right-color: #ffffff; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #13daec; }
+  border-left-color: #ffffff; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #13daec; }
+  border-bottom-color: #ffffff; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #13daec; }
+  border-top-color: #ffffff; }
 
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #71e9f4; }
@@ -172,4 +172,12 @@ body {
 .reveal #cap-theorem img {
   width: 40%;
   margin: 0;
+}
+
+/*********************************************
+  * Code Examples
+  *********************************************/
+.reveal pre {
+  background: DarkGrey;
+  font-size: 0.4em;
 }
